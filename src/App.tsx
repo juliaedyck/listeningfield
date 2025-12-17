@@ -100,13 +100,28 @@ const Title = styled.h1`
   }
 `;
 
+const Descriptions = styled.div`
+ display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 4px;
+  justify-content: center;
+
+@media (max-width: 760px) {
+ flex-direction: column;
+ align-items: stretch;
+}
+`;
+
 const Description = styled.p`
   margin: 0;
   color: ${colors.subtle};
     font-size: 16px;
     max-width: 90ch;
     line-height: 1.75;
-    text-align: center;
+     text-align: left;
+    padding: 3%;
+    background-color: ${colors.surface};
 
   @media (max-width: 760px) {
     max-width: 100%;
@@ -213,6 +228,7 @@ const Button = styled.button`
   width: min(520px, 100%);
   box-shadow: none;
   cursor: pointer;
+  margin-top: 5%;
 
    &:hover {
     color: ${colors.accent};
@@ -241,6 +257,20 @@ const SecondaryActions = styled.div`
  align-items: stretch;
 }
 `;
+
+const Email = styled.a`
+  color: ${colors.ink};
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 
 const Footer = styled.footer`
   width: 100%;
@@ -291,6 +321,7 @@ function App() {
 
 
             <PrimaryButton>What if listeners ran the world?</PrimaryButton>
+            <Descriptions>
             <Description>
               Over three days, artists and residents of Brussels gather to explore listening
               as a political and poetic act. The broadcast is a live unfolding of their
@@ -299,19 +330,41 @@ function App() {
               winter school, The Listening Field turns listening into a public gesture: a way
               of thinking aloud with the city, and inviting others to join the dialogue in
               real time.
+              <Button
+                onClick={() =>
+                  window.open('/ListeningField_EN.pdf', '_blank', 'noopener,noreferrer')
+                }
+              >
+                CALL FOR PARTICIPANTS
+              </Button>
             </Description>
+            <Description>
+            The Listening Field is een driedaagse winterschool die gewijd is aan de politieke handelingsbekwaamheid van de luisteraar. Gedurende drie dagen verkennen we luisteren als een compositorische, wereldvormende kracht — een praktijk waarin betekenis, geheugen en collectieve verbeelding worden onderhandeld, en waarin de handelingsbekwaamheid van de luisteraar binnen zijn, haar of hun wereld centraal staat.
+            <Button
+                onClick={() =>
+                  window.open('/ListeningField_NL.pdf', '_blank', 'noopener,noreferrer')
+                }
+              >
+               Oproep voor deelnemers
+              </Button>
+            </Description>
+            <Description>
+            Le Listening Field est une école d’hiver de trois jours dédiée à l’agence politique de l’auditeur. Sur trois jours, nous explorerons l’écoute comme une force compositionnelle qui façonne le monde — une pratique à travers laquelle le sens, la mémoire et l’imagination collective se négocient, tout comme l’agence de l’auditeur dans son rapport au réel.
+            <Button
+                onClick={() =>
+                  window.open('/ListeningField_FR.pdf', '_blank', 'noopener,noreferrer')
+                }
+              >
+              Appel à participation
+              </Button>
+            </Description>
+            </Descriptions>
             <Actions>
               <Subhead>29–31 January 2026 <br></br> GC De Rinck (Anderlecht)</Subhead>
               <Subhead>
                 Part of SON.OOR · With BNA-BBOT & artist-Commons & School of Magical Politics
               </Subhead>
-              <Button
-                onClick={() =>
-                  window.open('/listening%20field.pdf', '_blank', 'noopener,noreferrer')
-                }
-              >
-                CALL FOR PARTICIPANTS
-              </Button>
+           
             </Actions>
             <Subhead>Masterclasses & Broadcast</Subhead>
             <SecondaryActions>
@@ -342,6 +395,10 @@ function App() {
                 Masterclass 2 <br></br> 05/03/2026 <br></br>(more soon)
               </SecondaryButton>
             </SecondaryActions>
+            <Email href="mailto:listeningfield@proton.me">
+  listeningfield@proton.me
+</Email>
+
           </Header>
         </Card>
 
@@ -375,6 +432,10 @@ function App() {
           <Logo
             src="/PNG-N-Logo Brussel transparant.png"
             alt="Brussels logo"
+          />
+             <Logo
+            src="/BNA-BBOT_logo-2566264724.jpg"
+            alt="BNA BBOT logo"
           />
         </Footer>
       </Layout>
