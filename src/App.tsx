@@ -25,7 +25,7 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 32px);
+  padding: clamp(16px, 4vw, 32px);
   gap: 40px;
 
   @media (max-width: 760px) {
@@ -79,19 +79,13 @@ const Header = styled.header`
 
 const Title = styled.h1`
   margin: 0;
-  font-size: clamp(56px, 12vw, 140px);
+  font-size: clamp(56px, 12vw, 130px);
   line-height: 0.85;
   color: ${colors.ink};
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
 
-  // &:last-of-type {
-  //   font-size: clamp(28px, 7vw, 88px);
-  //   letter-spacing: -0.025em;
-  //   line-height: 0.9;
-  //   margin-top: clamp(12px, 2vw, 18px);
-  // }
 
   @media (max-width: 760px) {
     font-size: clamp(22px, 9vw, 46px);
