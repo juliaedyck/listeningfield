@@ -13,7 +13,7 @@ const Page = styled.main`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 72px clamp(16px, 4vw, 32px) 96px;
+  padding: 30px clamp(16px, 4vw, 32px) 96px;
   background: ${colors.background};
   color: ${colors.ink};
 `;
@@ -95,7 +95,7 @@ const Header = styled.header`
 
 const Title = styled.h1`
   margin: 0;
-  font-size: clamp(56px, 12vw, 119px);
+  font-size: clamp(56px, 12vw, 140px);
   line-height: 0.85;
   color: ${colors.ink};
   letter-spacing: -0.06em;
@@ -229,13 +229,46 @@ const Button = styled.button`
   }
 `;
 
+const Footer = styled.footer`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 6vw, 48px);
+  padding: clamp(24px, 5vw, 40px) 0;
+  border-top: 1px solid rgba(38, 34, 31, 0.12);
+  margin-top: clamp(32px, 6vw, 56px);
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 0;
+  }
+`;
+
+const Logo = styled.img`
+  height: clamp(40px, 8vw, 80px);
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 120ms ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 760px) {
+    height: clamp(36px, 10vw, 60px);
+  }
+`;
+
 function App() {
   return (
     <Page>
       <Layout>
         <Card>
           <HeroImageWrap>
-            <Title>THE LISTENING FIELD</Title>
+            <Title>LISTENING FIELD</Title>
             <HeroImage src="/listeningfield.jpg" alt="The Listening Field collage" />
             <Title>WINTER SCHOOL</Title>
           </HeroImageWrap>
@@ -291,6 +324,17 @@ function App() {
             our questions, doubts, and discoveries are made audible during SON.OOR.
           </Description> */}
         {/* </Card> */}
+
+        <Footer>
+          <Logo
+            src="/Logo De Rinck_PNG (1).png"
+            alt="GC De Rinck logo"
+          />
+          <Logo
+            src="/PNG-N-Logo Brussel transparant.png"
+            alt="Brussels logo"
+          />
+        </Footer>
       </Layout>
     </Page>
   );
