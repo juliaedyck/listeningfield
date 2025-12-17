@@ -13,16 +13,19 @@ const Page = styled.main`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 30px clamp(16px, 4vw, 32px) 96px;
+  // padding: 30px clamp(16px, 4vw, 32px) 96px;
+  padding: 0;
   background: ${colors.background};
   color: ${colors.ink};
+  width: 100%;
 `;
 
 const Layout = styled.div`
   width: min(1180px, 100%);
   display: flex;
   flex-direction: column;
-
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 32px);
   gap: 40px;
 
   @media (max-width: 760px) {
@@ -73,23 +76,6 @@ const Header = styled.header`
   gap: 14px;
 `;
 
-// const Badge = styled.span`
-//   display: inline-flex;
-//   align-items: center;
-//   gap: 8px;
-//   width: fit-content;
-//   padding: 6px 12px;
-//   background: ${colors.surface};
-//   color: ${colors.ink};
-//   border-radius: 4px;
-//   font-weight: 700;
-//   font-size: 11px;
-//   letter-spacing: 0.16em;
-//   line-height: 1.3;
-//   text-transform: uppercase;
-//   border: 1px solid rgba(38, 34, 31, 0.35);
-//   box-shadow: none;
-// `;
 
 const Title = styled.h1`
   margin: 0;
@@ -108,14 +94,14 @@ const Title = styled.h1`
   // }
 
   @media (max-width: 760px) {
-    font-size: clamp(40px, 13vw, 72px);
+    font-size: clamp(22px, 9vw, 46px);
     line-height: 0.92;
-    letter-spacing: -0.04em;
+    // letter-spacing: -0.04em;
 
     &:last-of-type {
       font-size: clamp(22px, 9vw, 46px);
-      letter-spacing: -0.015em;
-      margin-top: clamp(10px, 3vw, 16px);
+      // letter-spacing: -0.015em;
+      // margin-top: clamp(10px, 3vw, 16px);
     }
   }
 `;
@@ -253,7 +239,13 @@ const SecondaryActions = styled.div`
   flex-direction: row;
   gap: 8px;
   margin-top: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
 
+@media (max-width: 760px) {
+ flex-direction: column;
+ align-items: stretch;
+}
 `;
 
 const Footer = styled.footer`
@@ -329,32 +321,32 @@ function App() {
             </Actions>
             <Subhead>Masterclasses & Broadcast</Subhead>
             <SecondaryActions>
-            <SecondaryButton
-              onClick={() =>
-                window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
-              }
-            >
-              Masterclass 1 <br></br>18/12/2025 <br></br>
-              Listening as Political Practice: Toward a Protocol of Attention
-            </SecondaryButton>
-             <SecondaryButton
-               onClick={() =>
-                 window.open(
-                   'https://www.lasemaineduson.be/event/offering-from-the-listening-field/',
-                   '_blank',
-                   'noopener,noreferrer'
-                 )
-               }
-             >
-               Broadcast <br></br>  31/01/2026  <br></br>  SON.OOR FESTIVAL
-             </SecondaryButton>
-            <SecondaryButton
-              onClick={() =>
-                window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
-              }
-            >
-              Masterclass 2 <br></br> 05/03/2026 <br></br>(more soon)
-            </SecondaryButton>
+              <SecondaryButton
+                onClick={() =>
+                  window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
+                }
+              >
+                Masterclass 1 <br></br>18/12/2025 <br></br>
+                Listening as Political Practice: Toward a Protocol of Attention
+              </SecondaryButton>
+              <SecondaryButton
+                onClick={() =>
+                  window.open(
+                    'https://www.lasemaineduson.be/event/offering-from-the-listening-field/',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
+                Broadcast <br></br>  31/01/2026  <br></br>  SON.OOR FESTIVAL
+              </SecondaryButton>
+              <SecondaryButton
+                onClick={() =>
+                  window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
+                }
+              >
+                Masterclass 2 <br></br> 05/03/2026 <br></br>(more soon)
+              </SecondaryButton>
             </SecondaryActions>
           </Header>
         </Card>
