@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const colors = {
-  background: '#f1e7d8',
-  accent: '#dd9d71',
+  background: '#f1f1f1',
+  accent: '#dd9d71a1',
   ink: '#26221f',
   surface: '#f9f3e8',
   subtle: '#4a443b',
@@ -32,11 +32,9 @@ const Layout = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  background: ${colors.surface};
-  border: 1px solid rgba(38, 34, 31, 0.14);
+  background: ${colors.background};
   border-radius: 2px;
   box-shadow: none;
-  padding: clamp(28px, 5vw, 42px) clamp(22px, 5vw, 48px);
   display: grid;
   gap: 28px;
 
@@ -51,7 +49,7 @@ const HeroImageWrap = styled.div`
   display: block;
   width: 100%;
   padding: clamp(6px, 1.2vw, 10px);
-  background: ${colors.surface};
+  background: ${colors.accent};
   border: 2px solid ${colors.ink};
   border-radius: 2px;
 `;
@@ -60,9 +58,9 @@ const HeroImage = styled.img`
   width: 100%;
   object-fit: cover;
   border-radius: 0;
-  border: 8px solid ${colors.accent};
-  box-shadow: none;
 
+  box-shadow: none;
+  max-height: 600px;
   @media (max-width: 760px) {
     border-width: 6px;
   }
@@ -98,7 +96,6 @@ const Title = styled.h1`
   font-size: clamp(56px, 12vw, 140px);
   line-height: 0.85;
   color: ${colors.ink};
-  letter-spacing: -0.06em;
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
@@ -126,7 +123,7 @@ const Title = styled.h1`
 const Description = styled.p`
   margin: 0;
   color: ${colors.subtle};
-    font-size: 15px;
+    font-size: 16px;
     max-width: 90ch;
     line-height: 1.75;
     text-align: center;
@@ -173,7 +170,28 @@ background: transparent;
   }
 `;
 
-const SecondaryButton = styled.div`
+const Subhead = styled.div`
+background: transparent;
+    color: #26221f;
+    padding: 12px 16px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: min(720px, 100%);
+    box-shadow: none;
+    font-family: 'Aileron', sans-serif;
+    text-align: center;
+
+
+  @media (max-width: 760px) {
+    width: 100%;
+    letter-spacing: 0.16em;
+    font-size: 12.5px;
+    padding: 11px 14px;
+  }
+`;
+const SecondaryButton = styled.button`
   background: transparent;
   color: ${colors.ink};
   border: 1.5px solid ${colors.accent};
@@ -186,12 +204,13 @@ const SecondaryButton = styled.div`
   width: min(520px, 100%);
   box-shadow: none;
   text-align: center;
+  cursor: pointer;
 
-  // &:hover {
-  //   color: ${colors.accent};
-  //   border-color: ${colors.accent};
-  //   background: transparent;
-  // }
+
+  &:hover {
+    border-color: ${colors.accent};
+    background: ${colors.accent};
+  }
 
   @media (max-width: 760px) {
     width: 100%;
@@ -227,6 +246,14 @@ const Button = styled.button`
     font-size: 11.5px;
     padding: 10px 12px;
   }
+`;
+
+const SecondaryActions = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 4px;
+
 `;
 
 const Footer = styled.footer`
@@ -288,10 +315,10 @@ function App() {
               real time.
             </Description>
             <Actions>
-              <SecondaryButton>29–31 January 2026 <br></br> GC De Rinck (Anderlecht)</SecondaryButton>
-              <SecondaryButton>
+              <Subhead>29–31 January 2026 <br></br> GC De Rinck (Anderlecht)</Subhead>
+              <Subhead>
                 Part of SON.OOR · With BNA-BBOT & artist-Commons & School of Magical Politics
-              </SecondaryButton>
+              </Subhead>
               <Button
                 onClick={() =>
                   window.open('/listening%20field.pdf', '_blank', 'noopener,noreferrer')
@@ -300,6 +327,35 @@ function App() {
                 CALL FOR PARTICIPANTS
               </Button>
             </Actions>
+            <Subhead>Masterclasses & Broadcast</Subhead>
+            <SecondaryActions>
+            <SecondaryButton
+              onClick={() =>
+                window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
+              }
+            >
+              Masterclass 1 <br></br>18/12/2025 <br></br>
+              Listening as Political Practice: Toward a Protocol of Attention
+            </SecondaryButton>
+             <SecondaryButton
+               onClick={() =>
+                 window.open(
+                   'https://www.lasemaineduson.be/event/offering-from-the-listening-field/',
+                   '_blank',
+                   'noopener,noreferrer'
+                 )
+               }
+             >
+               Broadcast <br></br>  31/01/2026  <br></br>  SON.OOR FESTIVAL
+             </SecondaryButton>
+            <SecondaryButton
+              onClick={() =>
+                window.open('https://www.bna-bbot.be/en/events/', '_blank', 'noopener,noreferrer')
+              }
+            >
+              Masterclass 2 <br></br> 05/03/2026 <br></br>(more soon)
+            </SecondaryButton>
+            </SecondaryActions>
           </Header>
         </Card>
 
