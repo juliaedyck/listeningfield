@@ -76,7 +76,11 @@ const Header = styled.header`
   gap: 14px;
 `;
 
-
+const ImageCredit= styled.p`
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+`
 const Title = styled.h1`
   margin: 0;
   font-size: clamp(56px, 12vw, 130px);
@@ -315,6 +319,7 @@ function App() {
             <HeroImage src="/listeningfield.jpg" alt="The Listening Field collage" />
             <Title>WINTER SCHOOL</Title>
           </HeroImageWrap>
+          <ImageCredit>Photo: Lower Levant Company (LLC) installation, “when the ear tells the eye where to look” 2023 photographed by Julia E. Dyck</ImageCredit>
 
           <Header>
 
