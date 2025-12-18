@@ -80,7 +80,11 @@ const ImageCredit= styled.p`
     padding: 0;
     margin: 0;
     font-size: 11px;
-`
+      @media (max-width: 760px) {
+    font-size: 8px;
+}
+`;
+
 const Title = styled.h1`
   margin: 0;
   font-size: clamp(56px, 12vw, 130px);
