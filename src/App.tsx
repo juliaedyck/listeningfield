@@ -341,7 +341,7 @@ function App() {
               real time.
               <Button
                 onClick={() =>
-                  window.open('/ListeningField_EN.pdf', '_blank', 'noopener,noreferrer')
+                  window.open('/ListeningField_EN1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
                 CALL FOR PARTICIPANTS
@@ -351,7 +351,7 @@ function App() {
             The Listening Field is een driedaagse winterschool die gewijd is aan de politieke handelingsbekwaamheid van de luisteraar. Gedurende drie dagen verkennen we luisteren als een compositorische, wereldvormende kracht — een praktijk waarin betekenis, geheugen en collectieve verbeelding worden onderhandeld, en waarin de handelingsbekwaamheid van de luisteraar binnen zijn, haar of hun wereld centraal staat.
             <Button
                 onClick={() =>
-                  window.open('/ListeningField_NL.pdf', '_blank', 'noopener,noreferrer')
+                  window.open('/ListeningField_NL1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
                Oproep voor deelnemers
@@ -361,7 +361,7 @@ function App() {
             Le Listening Field est une école d’hiver de trois jours dédiée à l’agence politique de l’auditeur. Sur trois jours, nous explorerons l’écoute comme une force compositionnelle qui façonne le monde — une pratique à travers laquelle le sens, la mémoire et l’imagination collective se négocient, tout comme l’agence de l’auditeur dans son rapport au réel.
             <Button
                 onClick={() =>
-                  window.open('/ListeningField_FR.pdf', '_blank', 'noopener,noreferrer')
+                  window.open('/ListeningField_FR1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
               Appel à participation
