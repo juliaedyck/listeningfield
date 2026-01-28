@@ -224,34 +224,34 @@ const SecondaryButton = styled.button`
   }
 `;
 
-const Button = styled.button`
-  background: ${colors.accent};
-  color: ${colors.ink};
-  border: 1.5px solid ${colors.ink};
-  border-radius: 2px;
-  padding: 10px 14px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-size: 18px;
-  width: min(520px, 100%);
-  box-shadow: none;
-  cursor: pointer;
-  margin-top: 5%;
+// const Button = styled.button`
+//   background: ${colors.accent};
+//   color: ${colors.ink};
+//   border: 1.5px solid ${colors.ink};
+//   border-radius: 2px;
+//   padding: 10px 14px;
+//   font-weight: 700;
+//   letter-spacing: 0.16em;
+//   text-transform: uppercase;
+//   font-size: 18px;
+//   width: min(520px, 100%);
+//   box-shadow: none;
+//   cursor: pointer;
+//   margin-top: 5%;
 
-   &:hover {
-    color: ${colors.accent};
-   border-color: ${colors.accent};
-   background: transparent;
-   }
+//    &:hover {
+//     color: ${colors.accent};
+//    border-color: ${colors.accent};
+//    background: transparent;
+//    }
 
-  @media (max-width: 760px) {
-    width: 100%;
-    letter-spacing: 0.14em;
-    font-size: 11.5px;
-    padding: 10px 12px;
-  }
-`;
+//   @media (max-width: 760px) {
+//     width: 100%;
+//     letter-spacing: 0.14em;
+//     font-size: 11.5px;
+//     padding: 10px 12px;
+//   }
+// `;
 
 const SecondaryActions = styled.div`
   display: flex;
