@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LiveRadioPlayer from './Radio';
 
 const colors = {
   background: '#f1f1f1',
@@ -279,6 +280,18 @@ const Email = styled.a`
   }
 `;
 
+const Italic = styled.h3`
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-size: 22px;
+`
+const Broadcast = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
 const Footer = styled.footer`
   width: 100%;
@@ -324,8 +337,12 @@ function App() {
             <Title>WINTER SCHOOL</Title>
           </HeroImageWrap>
           <ImageCredit>Photo: Lower Levant Company (LLC) installation, “when the ear tells the eye where to look” 2023 photographed by Julia E. Dyck</ImageCredit>
-
+<Broadcast>
+<Italic>LIVE BROADCAST 31.01 16h00 CET</Italic>
+<LiveRadioPlayer/>
+</Broadcast>
           <Header>
+
 
 
 
@@ -339,33 +356,33 @@ function App() {
               winter school, The Listening Field turns listening into a public gesture: a way
               of thinking aloud with the city, and inviting others to join the dialogue in
               real time.
-              <Button
+              {/* <Button
                 onClick={() =>
                   window.open('/ListeningField_EN1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
                 CALL FOR PARTICIPANTS
-              </Button>
+              </Button> */}
             </Description>
             <Description>
             The Listening Field is een driedaagse winterschool die gewijd is aan de politieke handelingsbekwaamheid van de luisteraar. Gedurende drie dagen verkennen we luisteren als een compositorische, wereldvormende kracht — een praktijk waarin betekenis, geheugen en collectieve verbeelding worden onderhandeld, en waarin de handelingsbekwaamheid van de luisteraar binnen zijn, haar of hun wereld centraal staat.
-            <Button
+            {/* <Button
                 onClick={() =>
                   window.open('/ListeningField_NL1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
                Oproep voor deelnemers
-              </Button>
+              </Button> */}
             </Description>
             <Description>
             Le Listening Field est une école d’hiver de trois jours dédiée à l’agence politique de l’auditeur. Sur trois jours, nous explorerons l’écoute comme une force compositionnelle qui façonne le monde — une pratique à travers laquelle le sens, la mémoire et l’imagination collective se négocient, tout comme l’agence de l’auditeur dans son rapport au réel.
-            <Button
+            {/* <Button
                 onClick={() =>
                   window.open('/ListeningField_FR1.pdf', '_blank', 'noopener,noreferrer')
                 }
               >
               Appel à participation
-              </Button>
+              </Button> */}
             </Description>
             </Descriptions>
             <Actions>
