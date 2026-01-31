@@ -286,6 +286,11 @@ const Italic = styled.h3`
   font-style: italic;
   font-size: 22px;
   margin:2%;
+  text-align:justify;
+
+  @media (max-width: 760px) {
+font-size: 14px;
+}
 `
 const Broadcast = styled.div`
   display: flex;
