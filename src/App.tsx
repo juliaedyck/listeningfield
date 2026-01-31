@@ -285,6 +285,7 @@ const Italic = styled.h3`
   font-optical-sizing: auto;
   font-style: italic;
   font-size: 22px;
+  margin:2%;
 `
 const Broadcast = styled.div`
   display: flex;
@@ -338,7 +339,9 @@ function App() {
           </HeroImageWrap>
           <ImageCredit>Photo: Lower Levant Company (LLC) installation, “when the ear tells the eye where to look” 2023 photographed by Julia E. Dyck</ImageCredit>
 <Broadcast>
-<Italic>LIVE BROADCAST 31.01 16h00 CET</Italic>
+<Italic>LIVE BROADCAST 31.01 16h00 - 18h00 CET</Italic>
+<Italic>with Némo Camus, Joan Somers Donnelly, Julia E. Dyck, Lara ferrari tumma, Oscar Mathieu Le Bussy, Maria Muehombo, Mira Matthew, Eszter Nemethi, Berno Odo Polzer, Gülce Padem, Norma Prendergast, Karolien Polenus, Olivier Praet, Melissa Ryke, Femke Snelting, Ewoud Vermote
+</Italic>
 <LiveRadioPlayer/>
 </Broadcast>
           <Header>
